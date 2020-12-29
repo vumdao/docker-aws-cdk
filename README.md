@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
+  <a href="https://dev.to/vumdao">
     <img alt="Create AWS-CDK image container" src="https://dev-to-uploads.s3.amazonaws.com/i/45ftdv41mae8bagj90wn.png" width="160" />
   </a>
 </p>
