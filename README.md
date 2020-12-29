@@ -23,12 +23,9 @@
 ## What’s In This Document 
 - [Dockerfile](#-Dockerfile)
 - [Build and Test container image](#-Build-and-Test-container-image)
-- [Migration Guides](#-migration-guides)
-- [How to Contribute](#-how-to-contribute)
-- [License](#memo-license)
-- [Thanks to Our Contributors and Sponsors](#-thanks)
 
-### 🚀 **1. Dockerfile**
+
+### 🚀 **Dockerfile**
 - Base image: `amazon/aws-lambda-python:3.8`
 - Install nodejs 12 and aws-cdk version 1.73.0
 - Install some cdk libaries
@@ -51,7 +48,7 @@ RUN yum -y update && \
 CMD ["cdk version"]
 ```
 
-### 🚀 **2. Build and Test container image**
+### 🚀 **Build and Test container image**
 ```
 ⚡ $ docker build -t awscdk .
 ⚡ $ docker run -d --name test -it awscdk
@@ -80,47 +77,6 @@ you can create the virtualenv manually.
 
 To manually create a virtualenv on MacOS and Linux:
 
-```
-$ python3 -m venv .venv
-```
-
-After the init process completes and the virtualenv is created, you can use the following
-step to activate your virtualenv.
-
-```
-$ source .venv/bin/activate
-```
-
-If you are a Windows platform, you would activate the virtualenv like this:
-
-```
-% .venv\Scripts\activate.bat
-```
-
-Once the virtualenv is activated, you can install the required dependencies.
-
-```
-$ pip install -r requirements.txt
-```
-
-At this point you can now synthesize the CloudFormation template for this code.
-
-```
-$ cdk synth
-```
-
-To add additional dependencies, for example other CDK libraries, just add
-them to your `setup.py` file and rerun the `pip install -r requirements.txt`
-command.
-
-## Useful commands
-
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
-
 Enjoy!
 
 Initializing a new git repository...
@@ -132,6 +88,7 @@ Executing Creating virtualenv...
 
 ⚡ $ docker exec -it test ls
 app.py  cdk.json  README.md  requirements.txt  setup.py  source.bat  stack
+
 ⚡ $ docker exec -it test ls stack
 __init__.py  stack_stack.py
 ```
